@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="about py-20 bg-white" id="about">
-      <div className="grid grid-cols-2 gap-10 max-w-[1200px] mx-auto place-items-center">
-        <article className="about_image">
+    <section className="about py-20 px-10 md:px-0 bg-white" id="about">
+      <div className="grid lg:grid-cols-2 gap-10 max-w-[1200px] mx-auto place-items-center">
+        <article className="hidden lg:block">
           <Image
             className="rounded-lg"
             src="/about-img.jpg"
