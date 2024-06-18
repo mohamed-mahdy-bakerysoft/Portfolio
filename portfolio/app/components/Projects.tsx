@@ -12,8 +12,8 @@ export default function Projects() {
       tech: "Next.js, TailwindCSS, Typescript",
       description:
         "My personal portfolio website to showcase my projects and skills",
-      appLink: "https://github.com/julian-sanchez-dev/portfolio",
-      repoLink: "https://github.com/julian-sanchez-dev/portfolio",
+      appLink: "https://portfolio-dusky-two-10.vercel.app/",
+      repoLink: "https://github.com/benono",
     },
     {
       id: 2,
