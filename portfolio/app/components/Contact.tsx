@@ -1,10 +1,12 @@
+import { toast } from "sonner";
+
 export default function Contact() {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    alert("Message sent");
+    toast.success("Message sent");
   };
   return (
-    <section className="contact py-20 bg-white text-primary">
+    <section className="contact py-20 bg-white text-primary" id="contact">
       <div className="w-[60%] mx-auto">
         <h2 className="text-4xl font-bold text-center">Contact</h2>
         <div className="justify-center items-center bg-primary-700 text-primary-100 rounded-lg shadow-lg">
