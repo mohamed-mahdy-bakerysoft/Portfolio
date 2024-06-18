@@ -32,17 +32,18 @@ export default function Home() {
   }, []);
 
   const contents = [
-    { id: "about", title: "About", component: <About /> },
-    { id: "projects", title: "Projects", component: <Projects /> },
-    { id: "skills", title: "Skills", component: <Skills /> },
-    { id: "work", title: "Work", component: <WorkExperiences /> },
-    { id: "contact", title: "Contact", component: <Contact /> },
+    { id: "home", title: "Home" },
+    { id: "about", title: "About" },
+    { id: "projects", title: "Projects" },
+    { id: "skills", title: "Skills" },
+    { id: "work", title: "Work" },
+    { id: "contact", title: "Contact" },
   ];
   return (
     <>
       <Head>
         <title>My Portfolio</title>
-        <meta name="description" content="My professional portfolio" />
+        <meta name="description" content="Ben Ono Home" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <a href="#" className="text-xl font-bold text-white">
+              <a href="#" className="text-xl font-bold text-primary-100">
                 My Portfolio
               </a>
             </div>
@@ -60,25 +61,18 @@ export default function Home() {
                   <a
                     href={`#${content.id}`}
                     key={content.id}
-                    className="text-white hover:text-accent px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-primary-100 hover:text-accent px-3 py-2 rounded-md text-lg font-medium"
                   >
                     {content.title}
                   </a>
                 ))}
               </div>
-
-              {/* <a
-                  href="#skills"
-                  className="text-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Skills
-                </a> */}
             </div>
           </div>
         </div>
       </nav>
       <header className="h-[90vh] bg-primary flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-6xl font-bold" id="home">
           Hi, I&apos;m <span className="text-accent">Ben Ono</span>
         </h1>
         <p className="mt-3 text-2xl">This is a showcase of my work.</p>
