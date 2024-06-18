@@ -55,13 +55,19 @@ export default function Home() {
                 My Portfolio
               </a>
             </div>
+            <div className="sm:block md:hidden">
+              {/* TODO open menu on click */}
+              <button className="bg-primary-100 text-primary-700 font-bold py-2 px-4 rounded">
+                Menu
+              </button>
+            </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {contents.map((content) => (
                   <a
                     href={`#${content.id}`}
                     key={content.id}
-                    className="text-primary-100 hover:text-accent px-3 py-2 rounded-md text-lg font-medium"
+                    className="text-primary-100 hover:text-accent transition duration-500 px-3 py-2 rounded-md text-lg font-medium"
                   >
                     {content.title}
                   </a>
@@ -72,7 +78,7 @@ export default function Home() {
         </div>
       </nav>
       <header className="h-[90vh] bg-primary flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold" id="home">
+        <h1 className="text-6xl font-bold text-primary-100" id="home">
           Hi, I&apos;m <span className="text-accent">Ben Ono</span>
         </h1>
         <p className="mt-3 text-2xl">This is a showcase of my work.</p>
