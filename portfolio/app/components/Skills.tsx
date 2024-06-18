@@ -7,11 +7,13 @@ import {
   FaHtml5,
   FaCss3,
   FaJsSquare,
-} from "react-icons/fa";
-import { SiGooglecloud, SiVuetify } from "react-icons/si";
-import { FaGolang } from "react-icons/fa6";
-import { RiNextjsFill } from "react-icons/ri";
-import { TbBrandNuxt } from "react-icons/tb";
+} from "react-icons/fa"
+import { SiGooglecloud, SiVuetify } from "react-icons/si"
+import { FaGolang } from "react-icons/fa6"
+import { RiNextjsFill } from "react-icons/ri"
+import { TbBrandNuxt } from "react-icons/tb"
+
+import SectionHeader from "@/components/SectionComponent"
 
 export default function Skills() {
   // Use colored icon
@@ -29,13 +31,10 @@ export default function Skills() {
     { icon: <FaJava color="#F7DF1E" />, name: "Java" },
     { icon: <FaGithub color="#333333" />, name: "GitHub" },
     { icon: <SiGooglecloud color="#4285F4" />, name: "Google Cloud" },
-  ];
+  ]
   return (
     <section className="skills py-20 bg-white text-primary" id="skills">
-      <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-4xl font-bold text-center">Skills</h2>
-        <div className="underline"></div>
-      </div>
+      <SectionHeader title="Skills" />
       <div className="section-main grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
         {skills.map((skill, index) => (
           <div
@@ -48,5 +47,5 @@ export default function Skills() {
         ))}
       </div>{" "}
     </section>
-  );
+  )
 }

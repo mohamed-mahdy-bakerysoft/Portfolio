@@ -1,4 +1,6 @@
-import Image from "next/image";
+import Image from "next/image"
+
+import SectionHeader from "@/components/SectionComponent"
 
 export default function Projects() {
   // TODO make it linked to the projects
@@ -32,16 +34,13 @@ export default function Projects() {
       appLink: "https://github.com/julian-sanchez-dev",
       repoLink: "https://github.com/benono",
     },
-  ];
+  ]
   return (
     <section
       className="projects py-20 bg-primary text-primary-100"
       id="projects"
     >
-      <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-4xl font-bold text-center">Projects</h2>
-        <div className="underline"></div>
-      </div>
+      <SectionHeader title="Projects" />
       <div className="w-[90vw] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
         {projects.map((project) => (
           <article
@@ -88,5 +87,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  );
+  )
 }

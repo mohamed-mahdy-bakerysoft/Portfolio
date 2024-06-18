@@ -1,3 +1,5 @@
+import SectionHeader from "@/components/SectionComponent"
+
 export default function WorkExperiences() {
   const experiences = [
     {
@@ -14,14 +16,12 @@ export default function WorkExperiences() {
       description:
         "Developed an e-commerce system using Java, focusing on backend services and database management.",
     },
-  ];
+  ]
 
   return (
     <section className="work-experiences py-20 bg-primary text-white" id="work">
-      <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-4xl font-bold text-center">Work Experiences</h2>
-        <div className="underline"></div>
-      </div>
+      <SectionHeader title="Work Experiences" />
+
       <div className="section-main mt-10">
         <div className="relative border-l border-gray-200 dark:border-primary-900">
           {experiences.map((experience, index) => (
@@ -57,6 +57,6 @@ export default function WorkExperiences() {
         </div>
       </div>
     </section>
-  );
-  <div>WorkExperiences</div>;
+  )
+  ;<div>WorkExperiences</div>
 }
