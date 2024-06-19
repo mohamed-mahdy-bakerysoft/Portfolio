@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 
 export default function Header() {
   const contacts = [
@@ -8,7 +8,7 @@ export default function Header() {
       link: "https://www.linkedin.com/in/ben-ono-53179a257/",
     },
     { icon: <FaDev />, link: "https://dev.to/benono" },
-  ]
+  ];
   return (
     <header className="h-[90vh] bg-primary flex flex-col items-center justify-center w-full flex-1 px-20 ">
       <h1 className="text-6xl font-bold text-primary-100" id="home">
@@ -30,5 +30,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

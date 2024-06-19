@@ -1,6 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
 
-import SectionHeader from "@/components/SectionComponent"
+import SectionHeader from "@/components/SectionComponent";
 
 export default function Projects() {
   // TODO make it linked to the projects
@@ -12,8 +12,8 @@ export default function Projects() {
       tech: "Next.js, TailwindCSS, Typescript",
       description:
         "My personal portfolio website to showcase my projects and skills",
-      appLink: "https://portfolio-dusky-two-10.vercel.app/",
-      repoLink: "https://github.com/benono",
+      appLink: "https://github.com/julian-sanchez-dev/portfolio",
+      repoLink: "https://github.com/julian-sanchez-dev/portfolio",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function Projects() {
       appLink: "https://github.com/julian-sanchez-dev",
       repoLink: "https://github.com/benono",
     },
-  ]
+  ];
   return (
     <section
       className="projects py-20 bg-primary text-primary-100"
@@ -87,5 +87,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
