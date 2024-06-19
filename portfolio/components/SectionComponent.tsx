@@ -1,5 +1,5 @@
 interface SectionHeaderProps {
-  title: string
+  title: string;
 }
 
 export default function SectionHeader({ title }: SectionHeaderProps) {
@@ -8,5 +8,5 @@ export default function SectionHeader({ title }: SectionHeaderProps) {
       <h2 className="text-4xl font-bold text-center">{title}</h2>
       <div className="underline"></div>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/SectionComponent"
+import SectionHeader from "@/components/SectionComponent";
 
 export default function WorkExperiences() {
   const experiences = [
@@ -16,7 +16,7 @@ export default function WorkExperiences() {
       description:
         "Developed an e-commerce system using Java, focusing on backend services and database management.",
     },
-  ]
+  ];
 
   return (
     <section className="work-experiences py-20 bg-primary text-white" id="work">
@@ -57,6 +57,6 @@ export default function WorkExperiences() {
         </div>
       </div>
     </section>
-  )
-  ;<div>WorkExperiences</div>
+  );
+  <div>WorkExperiences</div>;
 }

@@ -7,13 +7,13 @@ import {
   FaHtml5,
   FaCss3,
   FaJsSquare,
-} from "react-icons/fa"
-import { SiGooglecloud, SiVuetify } from "react-icons/si"
-import { FaGolang } from "react-icons/fa6"
-import { RiNextjsFill } from "react-icons/ri"
-import { TbBrandNuxt } from "react-icons/tb"
+} from "react-icons/fa";
+import { SiGooglecloud, SiVuetify } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandNuxt } from "react-icons/tb";
 
-import SectionHeader from "@/components/SectionComponent"
+import SectionHeader from "@/components/SectionComponent";
 
 export default function Skills() {
   // Use colored icon
@@ -31,7 +31,7 @@ export default function Skills() {
     { icon: <FaJava color="#F7DF1E" />, name: "Java" },
     { icon: <FaGithub color="#333333" />, name: "GitHub" },
     { icon: <SiGooglecloud color="#4285F4" />, name: "Google Cloud" },
-  ]
+  ];
   return (
     <section className="skills py-20 bg-white text-primary" id="skills">
       <SectionHeader title="Skills" />
@@ -47,5 +47,5 @@ export default function Skills() {
         ))}
       </div>{" "}
     </section>
-  )
+  );
 }
