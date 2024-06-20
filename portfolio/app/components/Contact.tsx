@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
+import { FormData } from "@/types/formData";
 
 export default function Contact() {
-  const [formdata, setFormdata] = useState({
+  const [formdata, setFormdata] = useState<FormData>({
     user_name: "",
     user_email: "",
     message: "",
@@ -36,18 +36,57 @@ export default function Contact() {
     return true;
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const sendMailToHost = async (formdata: FormData) => {
+    try {
+      const response = await fetch("/api/email/host", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formdata),
+      });
+
+      const result = await response.json();
+      return result;
+    } catch (error) {
+      console.error("An error occurred while sending mail to host:", error);
+      throw error;
+    }
+  };
+
+  const sendMailToUser = async (formdata: FormData) => {
+    try {
+      const response = await fetch("/api/email/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formdata),
+      });
+
+      const result = await response.json();
+      return result;
+    } catch (error) {
+      console.error("An error occurred while sending mail to user:", error);
+      throw error;
+    }
+  };
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (!validateForm()) return;
-    toast.success(
-      `thank you ${formdata.user_name} for your message, I will get back to you at ${formdata.user_email}`
-    );
-    emailjs.send(
-      process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID as string,
-      process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID as string,
-      formdata,
-      process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
-    );
+    if (!validateForm()) {
+      return;
+    }
+    try {
+      const hostResponse = await sendMailToHost(formdata);
+      const userResponse = await sendMailToUser(formdata);
+      if (hostResponse.success && userResponse.success) {
+        toast.success(`Message sent. Thank you ${formdata.user_name}!`);
+      } else {
+        toast.error("Failed to send message");
+      }
+    } catch (error) {
+      toast.error("An error occurred");
+    }
   };
   return (
     <section className="contact py-20 bg-white text-primary" id="contact">
@@ -89,8 +128,8 @@ export default function Contact() {
             </div>
             <div className="flex flex-row my-4 items-center justify-center">
               <button
-                onClick={handleClick}
-                className="w-full mb-8 p-2 rounded-md bg-primary-400 text-primary-100"
+                onClick={handleSubmit}
+                className="w-full mb-8 p-2 rounded-md bg-primary-400 hover:bg-primary-300 text-primary-100"
               >
                 Send
               </button>
