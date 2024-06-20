@@ -14,7 +14,7 @@ export default function Header() {
       <h1 className="text-6xl font-bold text-primary-100" id="home">
         Hi👍 I&apos;m <span className="text-accent">Ben Ono </span>
       </h1>
-      <div className="mt-3 text-2xl w-[500px] text-primary-100">
+      <div className="mt-3 text-2xl md:w-[500px] w-full text-primary-100">
         <p>I&apos;m a full stack developer based in Vancouver, Canada.</p>
         <div className="mt-5 flex justify-center gap-10">
           {contacts.map((contact, index) => (
