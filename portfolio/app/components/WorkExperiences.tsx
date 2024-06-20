@@ -19,7 +19,10 @@ export default function WorkExperiences() {
   ];
 
   return (
-    <section className="work-experiences py-20 bg-primary text-white" id="work">
+    <section
+      className="work-experiences py-20 bg-primary text-primary-100"
+      id="work"
+    >
       <SectionHeader title="Work Experiences" />
 
       <div className="section-main mt-10">
@@ -28,7 +31,7 @@ export default function WorkExperiences() {
             <div key={index} className="mb-10 ml-6">
               <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-400 border-[1px] border-accent-400">
                 <svg
-                  className="w-3 h-3 text-accen dark:text-primary-200"
+                  className="w-3 h-3 text-primary-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +43,7 @@ export default function WorkExperiences() {
                   ></path>
                 </svg>
               </span>
-              <h3 className="flex items-start mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="flex items-center ml-2 mb-1 text-lg font-semibold text-primary-100">
                 <span className="text-2xl">{experience.role}</span>
                 <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-1 rounded dark:bg-blue-200 dark:text-gray-800 ml-3">
                   {experience.company}
