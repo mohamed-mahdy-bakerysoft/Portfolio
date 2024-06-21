@@ -2,12 +2,13 @@ import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 
 export default function Header() {
   const contacts = [
-    { icon: <FaGithub />, link: "https://github.com/benono" },
+    { icon: <FaGithub />, link: "https://github.com/benono", alt: "Github" },
     {
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/ben-ono-53179a257/",
+      alt: "LinkedIn",
     },
-    { icon: <FaDev />, link: "https://dev.to/benono" },
+    { icon: <FaDev />, link: "https://dev.to/benono", alt: "Dev" },
   ];
   return (
     <header className="h-[90vh] bg-primary flex flex-col items-center justify-center w-full flex-1 px-20 ">
@@ -23,6 +24,7 @@ export default function Header() {
               href={contact.link}
               target="_blank"
               className="text-primary-100 hover:scale-110 transition duration-300"
+              aria-label={contact.alt}
             >
               {contact.icon}
             </a>

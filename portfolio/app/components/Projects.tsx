@@ -7,7 +7,7 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      img: "/portfolio.jpg",
+      img: "/portfolio.png",
       title: "Portfolio",
       tech: "Next.js, TailwindCSS, Typescript",
       description:
@@ -17,6 +17,15 @@ export default function Projects() {
     },
     {
       id: 2,
+      img: "/random-cat.png",
+      title: "Random Cat",
+      tech: "Next.js, TailwindCSS, Vercel",
+      description: "A web app to get a random cat image from the cat api",
+      appLink: "https://random-cat-vert.vercel.app/",
+      repoLink: "https://github.com/benono/random-cat",
+    },
+    {
+      id: 3,
       img: "/kakeibo.jpg",
       title: "Family Account book",
       tech: "Next.js, Golang, Postgresql",
@@ -25,14 +34,15 @@ export default function Projects() {
       appLink: "https://famiibo-front.vercel.app/transaction?transactionId=1",
       repoLink: "https://github.com/benono/famiibo-api",
     },
+
     {
-      id: 3,
-      img: "/under_construction.jpg",
-      title: "Coming Soon",
-      tech: "It will Next.js, Prisma, and Superbase",
-      description: "Coming Soon",
-      appLink: "https://github.com/julian-sanchez-dev",
-      repoLink: "https://github.com/benono",
+      id: 4,
+      img: "/todo-app.png",
+      title: "Todo App",
+      tech: "React, Golang(Echo), Render, Vercel",
+      description: "A todo app to manage your tasks",
+      appLink: "https://todoapp-react-kohl.vercel.app/",
+      repoLink: "https://github.com/benono/todoapp-react",
     },
   ];
   return (
@@ -45,16 +55,18 @@ export default function Projects() {
         {projects.map((project) => (
           <article
             key={project.id}
-            className="project border-2 bg-white border-white rounded-3xl shadow-lg hover:scale-105 transition-all duration-300"
+            className="project border-2 bg-white border-gray-300 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300"
           >
-            <Image
-              className="rounded-t-3xl"
-              src={project.img}
-              alt="Project 1"
-              width={300}
-              height={100}
-            />
-            <h3 className="p-4 pb-0 text-accent text-2xl font-semibold">
+            <div className="w-[300px] h-48 overflow-hidden">
+              <Image
+                className="rounded-t-3xl object-cover"
+                src={project.img}
+                alt="Project 1"
+                width={300}
+                height={100}
+              />
+            </div>
+            <h3 className="border-t-2 border-gray-300 p-4 pb-0 text-accent text-2xl font-semibold">
               {project.title}
             </h3>
             <p className="p-4 pt-0 text-primary-800 text-sm">{project.tech}</p>
