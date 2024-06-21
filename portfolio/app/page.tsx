@@ -71,20 +71,9 @@ export default function Home() {
   ];
   return (
     <>
-      <Head>
-        <title>My Portfolio</title>
-        <meta name="description" content="Ben Ono Home" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <nav className="h-[10vh] w-full bg-primary shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <a href="#" className="text-xl font-bold text-primary-100">
-                My Portfolio
-              </a>
-            </div>
+        <div className="px-4">
+          <div className="flex items-center justify-end h-16">
             <div className="sm:block md:hidden">
               {/* TODO open menu on click */}
               <GiHamburgerMenu

@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const { user_name, user_email, message }: FormData = await request.json();
 
     const { data, error } = await resend.emails.send({
-      from: "benono@resend.dev",
+      from: "benono@benono.dev",
       to: user_email,
       subject: "Your request has been received.",
       html: "",
