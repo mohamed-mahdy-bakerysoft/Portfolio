@@ -2,6 +2,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { FormData } from "@/types/formData";
 
+import SectionHeader from "@/components/SectionComponent";
+
 export default function Contact() {
   const [formdata, setFormdata] = useState<FormData>({
     user_name: "",
@@ -91,7 +93,7 @@ export default function Contact() {
   return (
     <section className="contact py-20 bg-white text-primary" id="contact">
       <div className="w-[70%] md:w-[80%] mx-auto">
-        <h2 className="text-4xl font-bold text-center">Contact</h2>
+        <SectionHeader title="Contact" />
         <div className="justify-center items-center bg-primary-700 text-primary rounded-lg shadow-lg">
           <form className="w-[80%] md:w-[90%] mx-auto max-w-[500px]">
             <div className="flex flex-row my-4 items-center justify-center">
