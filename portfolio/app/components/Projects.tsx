@@ -24,7 +24,7 @@ export default function Projects() {
       appLink: "https://random-cat-vert.vercel.app/",
       repoLink: "https://github.com/benono/random-cat",
     },
-    {
+    /* {
       id: 3,
       img: "/kakeibo.jpg",
       title: "Family Account book",
@@ -33,6 +33,16 @@ export default function Projects() {
         "A web app to manage family accounts and budgets. which allow us to select currencies and manage the budget of each family member",
       appLink: "https://famiibo-front.vercel.app/transaction?transactionId=1",
       repoLink: "https://github.com/benono/famiibo-api",
+    }, */
+    {
+      id: 3,
+      img: "/cinema-web.png",
+      title: "Cinema Web",
+      tech: "Next.js, Shadcn/UI, TMDB API",
+      description:
+        "A web app that provides information about movies, series and actors. It uses the TMDB API to get the data.",
+      appLink: "https://cinema-techo.vercel.app/",
+      repoLink: "https://github.com/benono",
     },
 
     {
