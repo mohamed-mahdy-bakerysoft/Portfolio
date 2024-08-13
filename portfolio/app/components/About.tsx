@@ -1,8 +1,13 @@
 import Image from "next/image";
+import { cn } from "../../lib/utils";
 
-export default function About() {
+export default function About({ className }: { className?: string }) {
   return (
-    <section className="about py-20 px-10 md:px-0 bg-white" id="about">
+    // <section className=" about py-20 px-10 bg-white" id="about">
+    <section
+      className={cn("animate-fade-in about py-20 px-10 bg-white", className)}
+      id="about"
+    >
       <div className="grid lg:grid-cols-2 gap-10 max-w-[1200px] mx-auto place-items-center">
         <article className="hidden lg:block">
           <Image
@@ -19,7 +24,7 @@ export default function About() {
           </h2>
           <div className="bg-accent w-20 h-1 mx-auto lg:ml-0 mb-10"></div>
           <p className="about_description">
-            Hi my name is ben ono and i&apos;m a full stack developer with a
+            Hi my name is ben ono and I&apos;m a full stack developer with a
             passion for creating user-friendly and efficient web applications.
             <br />
             <br />
@@ -27,8 +32,8 @@ export default function About() {
             old.
             <br />
             <br />I have a deep interest in programming. My favorite programming
-            languages are JavaScript and Golang, and I enjoy working with both
-            front-end and back-end technologies.
+            languages are JavaScript, Vue.js, React.js and Golang, and I enjoy
+            working with both front-end and back-end technologies.
           </p>
         </article>
       </div>
