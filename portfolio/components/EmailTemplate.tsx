@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from "react"
 
-import { FormData } from "@/types/formData";
+import { FormData } from "@/types/formData"
 
 export const ContactEmailTemplate: React.FC<Readonly<FormData>> = ({
   user_name,
@@ -9,13 +9,16 @@ export const ContactEmailTemplate: React.FC<Readonly<FormData>> = ({
 }) => (
   <div>
     <h1>You&apos;ve got a mail</h1>
+    <p>from </p>
     <br />
-    Name:{user_name}
+    {user_name}
     <br />
-    Address:{user_email})<br />
+    {user_email}
+    <br />
+    <p>and message is below</p>
     <p>{message}</p>
   </div>
-);
+)
 
 export const ReplyEmailTemplate: React.FC<Readonly<FormData>> = ({
   user_name,
@@ -28,4 +31,4 @@ export const ReplyEmailTemplate: React.FC<Readonly<FormData>> = ({
     <p>Best regards,</p>
     <p>Ben Ono</p>
   </div>
-);
+)
