@@ -1,12 +1,18 @@
 import Image from "next/image";
+import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
 
 import SectionHeader from "@/components/SectionComponent";
 import { BlogPost } from "@/types/";
 
 async function getBlogPosts(): Promise<BlogPost[]> {
-  const res = await fetch("https://dev.to/api/articles?username=benono", {
-    cache: "no-store",
-  });
+  const timestamp = new Date().getTime();
+  const res = await fetch(
+    `https://dev.to/api/articles?username=benono&t=${timestamp}`,
+    {
+      cache: "no-store",
+      next: { revalidate: 0 },
+    }
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch blog posts");
   }
@@ -24,14 +30,20 @@ export default async function Blogs() {
             key={post.id}
             className="project border-2 bg-white border-gray-300 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300"
           >
-            <div className="w-[300px] h-48 overflow-hidden">
-              <Image
-                className="rounded-t-3xl object-cover"
-                src={post.cover_image}
-                alt={post.title}
-                width={300}
-                height={300}
-              />
+            <div className="w-[300px] h-40 overflow-hidden">
+              {post.cover_image ? (
+                <Image
+                  className="rounded-t-3xl object-cover"
+                  src={post.cover_image}
+                  alt={post.title}
+                  width={300}
+                  height={300}
+                />
+              ) : (
+                <div className="w-[300px] h-40 bg-primary rounded-t-3xl flex justify-center items-center">
+                  <ImageNotSupportedIcon className="text-gray-400 text-xl w-14 h-14" />
+                </div>
+              )}
             </div>
             <h3 className="border-t-2 border-gray-300 p-4 pb-0 text-accent text-2xl font-semibold">
               {post.title}
@@ -45,7 +57,7 @@ export default async function Blogs() {
               })}
             </p>
             <div className="w-full flex justify-center">
-              <p className="p-4 text-primary w-[300px] min-h-40">
+              <p className="p-4 text-primary w-[300px] min-h-32">
                 {post.description}
               </p>
             </div>
