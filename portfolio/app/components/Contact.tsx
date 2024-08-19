@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { toast } from "sonner";
 import { FormData } from "@/types/formData";
@@ -91,10 +93,10 @@ export default function Contact() {
     }
   };
   return (
-    <section className="contact py-20 bg-white text-primary" id="contact">
+    <section className="contact py-20 bg-primary text-primary-100" id="contact">
       <div className="w-[70%] md:w-[80%] mx-auto">
         <SectionHeader title="Contact" />
-        <div className="justify-center items-center bg-primary-700 text-primary rounded-lg shadow-lg">
+        <div className="justify-center items-center rounded-lg ">
           <form className="w-[80%] md:w-[90%] mx-auto max-w-[500px]">
             <div className="flex flex-row my-4 items-center justify-center">
               <input
