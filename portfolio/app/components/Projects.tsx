@@ -15,15 +15,6 @@ export default function Projects() {
       appLink: "https://github.com/julian-sanchez-dev/portfolio",
       repoLink: "https://github.com/julian-sanchez-dev/portfolio",
     },
-    {
-      id: 2,
-      img: "/random-cat.png",
-      title: "Random Cat",
-      tech: "Next.js, TailwindCSS, Vercel",
-      description: "A web app to get a random cat image from the cat api",
-      appLink: "https://random-cat-vert.vercel.app/",
-      repoLink: "https://github.com/benono/random-cat",
-    },
     /* {
       id: 3,
       img: "/kakeibo.jpg",
@@ -35,6 +26,16 @@ export default function Projects() {
       repoLink: "https://github.com/benono/famiibo-api",
     }, */
     {
+      id: 2,
+      img: "/sketch-champ.png",
+      title: "Sketch-Champ",
+      tech: "React, Express, Mongo DB, WebSocket",
+      description:
+        "Multiplayer drawing and guessing game where players take turns drawing given themes while others try to guess what's being drawn.",
+      appLink: "https://sketch-champ-1.onrender.com/",
+      repoLink: "https://github.com/NelsoNave/sketch-champ",
+    },
+    {
       id: 3,
       img: "/cinema-web.png",
       title: "Cinema Web",
@@ -44,9 +45,17 @@ export default function Projects() {
       appLink: "https://cinema-techo.vercel.app/",
       repoLink: "https://github.com/benono",
     },
-
     {
       id: 4,
+      img: "/random-cat.png",
+      title: "Random Cat",
+      tech: "Next.js, TailwindCSS, Vercel",
+      description: "A web app to get a random cat image from the cat api",
+      appLink: "https://random-cat-vert.vercel.app/",
+      repoLink: "https://github.com/benono/random-cat",
+    },
+    {
+      id: 5,
       img: "/todo-app.png",
       title: "Todo App",
       tech: "React, Golang(Echo), Render, Vercel",
