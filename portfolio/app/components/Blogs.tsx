@@ -30,17 +30,18 @@ export default async function Blogs() {
             key={post.id}
             className="project border-2 bg-white border-gray-300 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300"
           >
-            <div className="w-[300px] h-40 overflow-hidden">
+            <div className="h-40 overflow-hidden">
               {post.cover_image ? (
                 <Image
-                  className="rounded-t-3xl object-cover"
+                  className="w-full h-[160px] rounded-t-3xl object-cover"
                   src={post.cover_image}
                   alt={post.title}
-                  width={300}
-                  height={300}
+                  width={220}
+                  height={150}
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               ) : (
-                <div className="w-[300px] h-40 bg-primary rounded-t-3xl flex justify-center items-center">
+                <div className="w-[220px] h-40 bg-primary rounded-t-3xl flex justify-center items-center">
                   <ImageNotSupportedIcon className="text-gray-400 text-xl w-14 h-14" />
                 </div>
               )}
